@@ -6,8 +6,8 @@
 This is very simple coding timer.
 
 ## How to start
-1. `docker-compose up -d'
-2. http://{{ip or domain}}
+1. docker-compose up -d
+2. http://{{ ip or domain}}:{{ port }}
 
 ## Used
 
