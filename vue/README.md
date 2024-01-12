@@ -2,16 +2,14 @@
 
 [![Validation Completed](https://img.shields.io/badge/W3C%20Markup%20Validation-Completed-blue.svg)](https://validator.w3.org/nu/?doc=https%3A%2F%2Feighth-bit-timer.web.app%2F)
 
-# 8-bit Timer
+# Coding timer
 
 ## Description
+This is very simple coding timer.
 
-심플한 레트로 타이머입니다.  
-This is very simple timer.
-
-## Demo
-
-<https://timer.moonspam.com/>
+## How to start
+1. `docker-compose up -d'
+2. http://{{ip or domain}}
 
 ## Used
 
@@ -21,3 +19,6 @@ This is very simple timer.
 - [favicon.io](https://favicon.io/)
 - [gitignore.io](https://gitignore.io)
 - [Firebase](https://firebase.google.com)
+
+## Forked
+<https://github.com/moonspam/8-bit-Timer>

@@ -66,7 +66,7 @@ export default {
   name: 'app',
   data() {
     return {
-      title: 'AD 합격! PRO 합격!',
+      title: 'CODING TIMER',
       timer: null,
       totalTime: initTime,
       setTime: initTime,
@@ -177,37 +177,83 @@ menu { padding: 0 }
   justify-content: center;
   text-align: center;
   color: #000;
-  .nes-container {
-    width: 32vw;
-    background-color: #fff;
-    animation: 60s burnInDetector steps(1, start) infinite;
-    video {
-      margin: auto;
-      width: 50%;
-      margin-bottom: 1vh;
-    }
-    .num {
-      padding: 10px 0;
-      font-size: 0;
-      span {
-        display: inline-block;
-        font-size: 48px;
+
+  //세로 모드, 뷰포트의 높이가 너비에 비해 상대적으로 크면 실행
+  @media all and (orientation:portrait){
+    .nes-container{
+      width: 80vw;
+      background-color: #fff;
+      animation: 60s burnInDetector steps(1, start) infinite;
+
+      video {
+        margin: auto;
+        width: 80%;
+        margin-bottom: 1vh;
       }
-    }
-    .btns {
-      display: flex;
-      margin-top: 8px;
-      &.control {
-        font-size: 16px;
+
+      .num {
+        padding: 2rem 0;
+        font-size: 0;
+        span {
+          display: inline-block;
+          font-size: 1.8rem;
+        }
       }
-      button {
-        flex: 1;
-      }
-      .full {
-        margin-left: 10px;
+
+      .btns {
+        display: flex;
+        margin-top: 8px;
+        &.control {
+          font-size: 16px;
+        }
+        button {
+          flex: 1;
+        }
+        .full {
+          margin-left: 10px;
+        }
       }
     }
   }
+
+  //가로 모드, 뷰포트의 너비가 높이에 비해 상대적으로 크면 실행
+  @media all and (orientation:landscape){
+    .nes-container{
+      width:35vw;
+      background-color: #fff;
+      animation: 60s burnInDetector steps(1, start) infinite;
+
+      video {
+        margin: auto;
+        width: 50%;
+        margin-bottom: 1vh;
+      }
+
+      .num {
+        padding: 10px 0;
+        font-size: 0;
+        span {
+          display: inline-block;
+          font-size: 48px;
+        }
+      }
+
+      .btns {
+        display: flex;
+        margin-top: 8px;
+        &.control {
+          font-size: 16px;
+        }
+        button {
+          flex: 1;
+        }
+        .full {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
   .footer {
     padding: 10px 0 0;
     a {
