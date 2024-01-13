@@ -2,7 +2,7 @@
   <div id="app">
     <div class="nes-container with-title is-centered">
       <h1 class="title">{{ title }}</h1>
-      <video src="https://media.giphy.com/media/f9w0K7c8vqYwuSPRHU/giphy.mp4" muted loop autoplay></video>
+      <div class="gif"></div>
       <div class="num">
         <span>{{ hours }}</span>
         <span>:</span>
@@ -155,9 +155,17 @@ html, body, pre, code, kbd, samp {
 }
 
 body {
-  font-size: 14px;
-  background: lighten(#209cee, 30%) url('https://media.giphy.com/media/gFhZjOtzoutSvckWPM/giphy.gif') no-repeat center center/cover;
-  // background: lighten(#209cee, 30%) url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif') no-repeat center center/cover;
+  //세로 모드, 뷰포트의 높이가 너비에 비해 상대적으로 크면 실행
+  @media all and (orientation:portrait){
+    height: 100vh;
+    background: lighten(#209cee, 30%) url('https://media.giphy.com/media/TrhpJt1hFqgCI/giphy.gif') no-repeat center center/cover;
+  }
+
+  //가로 모드, 뷰포트의 너비가 높이에 비해 상대적으로 크면 실행
+  @media all and (orientation:landscape){
+    height: 80vh;
+    background: lighten(#209cee, 30%) url('https://media.giphy.com/media/TrhpJt1hFqgCI/giphy.gif') no-repeat center center/cover;
+  }
 }
 
 menu { padding: 0 }
@@ -178,78 +186,50 @@ menu { padding: 0 }
   text-align: center;
   color: #000;
 
-  //세로 모드, 뷰포트의 높이가 너비에 비해 상대적으로 크면 실행
-  @media all and (orientation:portrait){
-    .nes-container{
-      width: 80vw;
-      background-color: #fff;
-      animation: 60s burnInDetector steps(1, start) infinite;
+  .nes-container{
+    max-width: 95vw;
+    background-color: #fff;
+    animation: 60s burnInDetector steps(1, start) infinite;
 
-      video {
-        margin: auto;
-        width: 80%;
-        margin-bottom: 1vh;
+    .gif {
+      margin: auto;
+      margin-top: 3vh;
+      margin-bottom: 1vh;
+      background: lighten(#209cee, 30%) url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHFtcHJxeDhwc3hpNzdhdzVoamhrbDN0ZnFtMDRuNm02MGl1eHUwMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f9w0K7c8vqYwuSPRHU/giphy.gif') no-repeat center center/cover;
+    
+      //세로 모드, 뷰포트의 높이가 너비에 비해 상대적으로 크면 실행
+      @media all and (orientation:portrait){
+        height: 30vh;
+        max-width: 80%;
       }
 
-      .num {
-        padding: 2rem 0;
-        font-size: 0;
-        span {
-          display: inline-block;
-          font-size: 1.8rem;
-        }
-      }
-
-      .btns {
-        display: flex;
-        margin-top: 8px;
-        &.control {
-          font-size: 16px;
-        }
-        button {
-          flex: 1;
-        }
-        .full {
-          margin-left: 10px;
-        }
+      //가로 모드, 뷰포트의 너비가 높이에 비해 상대적으로 크면 실행
+      @media all and (orientation:landscape){
+        height: 20vh;
+        max-width: 10vw;
       }
     }
-  }
 
-  //가로 모드, 뷰포트의 너비가 높이에 비해 상대적으로 크면 실행
-  @media all and (orientation:landscape){
-    .nes-container{
-      width:35vw;
-      background-color: #fff;
-      animation: 60s burnInDetector steps(1, start) infinite;
-
-      video {
-        margin: auto;
-        width: 50%;
-        margin-bottom: 1vh;
+    .num {
+      padding: 2rem 0;
+      font-size: 0;
+      span {
+        display: inline-block;
+        font-size: 1.5rem;
       }
+    }
 
-      .num {
-        padding: 10px 0;
-        font-size: 0;
-        span {
-          display: inline-block;
-          font-size: 48px;
-        }
+    .btns {
+      display: flex;
+      margin-top: 8px;
+      &.control {
+        font-size: 16px;
       }
-
-      .btns {
-        display: flex;
-        margin-top: 8px;
-        &.control {
-          font-size: 16px;
-        }
-        button {
-          flex: 1;
-        }
-        .full {
-          margin-left: 10px;
-        }
+      button {
+        flex: 1;
+      }
+      .full {
+        margin-left: 10px;
       }
     }
   }
