@@ -16,7 +16,6 @@ This is very simple coding timer.
 - [NoSleep.js](https://github.com/richtr/NoSleep.js/)
 - [favicon.io](https://favicon.io/)
 - [gitignore.io](https://gitignore.io)
-- [Firebase](https://firebase.google.com)
 
 ## Forked
 <https://github.com/moonspam/8-bit-Timer>
