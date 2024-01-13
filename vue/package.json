@@ -7,7 +7,7 @@
     "build": "webpack --mode=production",
     "start": "webpack-dev-server --mode=development"
   },
-  "author": "moonspam <booboo0412@gmail.com>",
+  "author": "nohdonggyeong <donggyeong1129@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.20.2",
