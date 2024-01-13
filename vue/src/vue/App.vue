@@ -2,7 +2,7 @@
   <div id="app">
     <div class="nes-container with-title is-centered">
       <h1 class="title">{{ title }}</h1>
-      <video src="https://media.giphy.com/media/fQZX2aoRC1Tqw/giphy.mp4" muted loop autoplay></video>
+      <video src="https://media.giphy.com/media/f9w0K7c8vqYwuSPRHU/giphy.mp4" muted loop autoplay></video>
       <div class="num">
         <span>{{ hours }}</span>
         <span>:</span>
@@ -66,7 +66,7 @@ export default {
   name: 'app',
   data() {
     return {
-      title: 'CODING TIMER',
+      title: '8bit-like TIMER',
       timer: null,
       totalTime: initTime,
       setTime: initTime,

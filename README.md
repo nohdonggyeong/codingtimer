@@ -1,9 +1,9 @@
 [![Validation Completed](https://img.shields.io/badge/W3C%20Markup%20Validation-Completed-blue.svg)](https://validator.w3.org/nu/?doc=https%3A%2F%2Feighth-bit-timer.web.app%2F)
 
-# Coding timer
+# 8bit-like timer
 
 ## Description
-This is very simple coding timer.
+This is very simple 8bit-like timer.
 
 ## How to start
 1. docker-compose up -d
