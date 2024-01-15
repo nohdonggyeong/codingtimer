@@ -155,17 +155,9 @@ html, body, pre, code, kbd, samp {
 }
 
 body {
-  //세로 모드, 뷰포트의 높이가 너비에 비해 상대적으로 크면 실행
-  @media all and (orientation:portrait){
-    height: 100vh;
-    background: lighten(#209cee, 30%) url('https://media.giphy.com/media/TrhpJt1hFqgCI/giphy.gif') no-repeat center center/cover;
-  }
-
-  //가로 모드, 뷰포트의 너비가 높이에 비해 상대적으로 크면 실행
-  @media all and (orientation:landscape){
-    height: 80vh;
-    background: lighten(#209cee, 30%) url('https://media.giphy.com/media/TrhpJt1hFqgCI/giphy.gif') no-repeat center center/cover;
-  }
+    background-image : url(../images/mario_background.gif);
+    background-size: cover ;
+    background-repeat: no-repeat;
 }
 
 menu { padding: 0 }
